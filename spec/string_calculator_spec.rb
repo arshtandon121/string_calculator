@@ -20,5 +20,11 @@ describe StringCalculator do
             end
         end
 
+        context 'given multiple numbers' do
+            it 'returns the sum' do
+              expect(StringCalculator.add("1,2,3,4,5")).to eq(15)
+            end
+        end
+
     end
 end
