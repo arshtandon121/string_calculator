@@ -38,6 +38,15 @@ describe StringCalculator do
             end
         end
 
+        context 'given negative numbers' do
+            it 'throws an exception' do
+              expect { StringCalculator.add("1,-2") }.to raise_error("Negatives not allowed: -2")
+            end
+          
+            it 'shows all negative numbers in the exception message' do
+              expect { StringCalculator.add("1,-2,-3") }.to raise_error("Negatives not allowed: -2, -3")
+            end
+        end
 
     end
 end
