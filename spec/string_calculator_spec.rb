@@ -32,6 +32,12 @@ describe StringCalculator do
             end
         end
 
-        
+        context 'given a custom delimiter' do
+            it 'returns the sum' do
+              expect(StringCalculator.add("//;\n1;2")).to eq(3)
+            end
+        end
+
+
     end
 end
